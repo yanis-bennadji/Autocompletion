@@ -1,0 +1,79 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+.container {
+    text-align: center;
+    padding: 50px;
+}
+header {
+    background-color: #262626;
+    padding: 20px;
+}
+.search-bar {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.search-bar input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background: #333333;
+    color: #ffffff;
+    font-size: 16px;
+}
+.search-bar button {
+    padding: 15px 20px;
+    background: #2074BA;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #262626;
+    border-radius: 0 0 10px 10px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.autocomplete-suggestions div {
+    padding: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.autocomplete-suggestions div:hover {
+    background-color: #2074BA;
+    color: #000000;
+}
+
+.bleach-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.container ul li a {
+    color: #ffffff; /* Définit une couleur de texte blanche ou autre couleur de ton choix */
+    transition: color 0.3s ease; /* Ajoute une transition pour un effet visuel */
+}
+
+.container ul li a:hover {
+    color: #2074BA; /* Couleur turquoise au survol */
+}
+
+.character-image {
+    max-width: 300px; /* Ajuste la taille maximale de l'image */
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre */
+    margin: 20px 0; /* Espacement */
+}
+
