@@ -26,18 +26,21 @@ $results = $query->fetchAll();
 <body>
     <?php include 'header.php'; ?>
     <div class="container">
-        <h1>Résultat pour "<?php echo htmlspecialchars($search); ?>"</h1>
+        <h1>Résultats pour "<?php echo htmlspecialchars($search); ?>"</h1>
         <?php if (count($results) > 0): ?>
-            <ul>
+            <div class="results-container">
                 <?php foreach ($results as $result): ?>
-                    <li>
-                        <a href="element.php?id=<?php echo $result['id']; ?>">
-                            <?php echo htmlspecialchars($result['prenom'] . ' ' . $result['nom']); ?>
-                        </a>
-                        <p><?php echo htmlspecialchars($result['categorie']); ?></p>
-                    </li>
+                    <div class="result-card">
+                        <!-- Informations sur le personnage -->
+                        <div class="result-info">
+                            <a href="element.php?id=<?php echo $result['id']; ?>" class="result-link">
+                                <?php echo htmlspecialchars($result['prenom'] . ' ' . $result['nom']); ?>
+                            </a>
+                            <p class="result-category"><strong>Category:</strong> <?php echo htmlspecialchars($result['categorie']); ?></p>
+                        </div>
+                    </div>
                 <?php endforeach; ?>
-            </ul>
+            </div>
         <?php else: ?>
             <p>No results found.</p>
         <?php endif; ?>
